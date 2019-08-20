@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="cardLoginTitle" datatype="html">
+        <source> Log In</source>
+        <target>Log In</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description"> login </note>
+        <note priority="1" from="meaning">title </note>
+      </trans-unit>
+      <trans-unit id="loginInputUsername" datatype="html">
+        <source>Type your username here</source>
+        <target>Tulis username anda di sini</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description"> input username on login </note>
+        <note priority="1" from="meaning">input </note>
+      </trans-unit>
+      <trans-unit id="loginInputPassword" datatype="html">
+        <source>Type your password here</source>
+        <target>Tulis Password Anda di sini</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description"> input password on login </note>
+        <note priority="1" from="meaning">input </note>
+      </trans-unit>
+      <trans-unit id="btnSubmit" datatype="html">
+        <source>
+          Log In
+        </source>
+        <target>Masuk</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login/login.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description"> button submit </note>
+        <note priority="1" from="meaning">button</note>
+      </trans-unit>
+
+      <trans-unit id="cardRegisterTitle" datatype="html">
+              <source> Register</source>
+              <target>Daftar</target>
+              <context-group purpose="location">
+                <context context-type="sourcefile">src/app/register/register.component.html</context>
+                <context context-type="linenumber">6</context>
+              </context-group>
+              <note priority="1" from="description"> register </note>
+              <note priority="1" from="meaning">title </note>
+            </trans-unit>
+            <trans-unit id="registerInputfirstName" datatype="html">
+              <source>Type your first name</source>
+              <target>tulis Nama Depan Anda</target>
+              <context-group purpose="location">
+                <context context-type="sourcefile">src/app/register/register.component.html</context>
+                <context context-type="linenumber">13</context>
+              </context-group>
+              <note priority="1" from="description"> input firstname on register </note>
+              <note priority="1" from="meaning">input </note>
+            </trans-unit>
+            <trans-unit id="registerInputLastName" datatype="html">
+              <source>Type your last name</source>
+              <target>tulis Nama Belakang Anda</target>
+              <context-group purpose="location">
+                <context context-type="sourcefile">src/app/register/register.component.html</context>
+                <context context-type="linenumber">28</context>
+              </context-group>
+              <note priority="1" from="description"> input lastname on login </note>
+              <note priority="1" from="meaning">input </note>
+            </trans-unit>
+            <trans-unit id="btnRegisterSubmit" datatype="html">
+              <source>
+                Register
+              </source>
+              <target>Daftar</target>
+              <context-group purpose="location">
+                <context context-type="sourcefile">src/app/register/register.component.html</context>
+                <context context-type="linenumber">69</context>
+              </context-group>
+              <note priority="1" from="description"> button submit </note>
+              <note priority="1" from="meaning">button</note>
+            </trans-unit>
+            <trans-unit id="btnLogin" datatype="html">
+              <source>
+            Log In
+          </source>
+          <target>Masuk</target>
+              <context-group purpose="location">
+                <context context-type="sourcefile">src/app/register/register.component.html</context>
+                <context context-type="linenumber">74</context>
+              </context-group>
+            </trans-unit>
+            <trans-unit id="dashboardTitle" datatype="html">
+              <source>Users</source>
+              <target>Pengguna</target>
+              <context-group purpose="location">
+                <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+                <context context-type="linenumber">6</context>
+              </context-group>
+            </trans-unit>
+            <trans-unit id="nameColumn" datatype="html">
+              <source>
+                   Name</source>
+                   <target>Nama</target>
+              <context-group purpose="location">
+                <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+                <context context-type="linenumber">11</context>
+              </context-group>
+            </trans-unit>
+            <trans-unit id="actionColumn" datatype="html">
+              <source>
+                    Action</source>
+                    <target>Pengaturan</target>
+              <context-group purpose="location">
+                <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+                <context context-type="linenumber">13</context>
+              </context-group>
+            </trans-unit>
+            <trans-unit id="deleteButton" datatype="html">
+              <source>
+                      Delete
+                    </source>
+                    <target>Hapus</target>
+              <context-group purpose="location">
+                <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+                <context context-type="linenumber">25</context>
+              </context-group>
+            </trans-unit>
+            <trans-unit id="homeTitle" datatype="html">
+              <source>Home <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>(current)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+              <target>Beranda <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>(current)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+              <context-group purpose="location">
+                <context context-type="sourcefile">src/app/_partial/navbar/navbar.component.html</context>
+                <context context-type="linenumber">8</context>
+              </context-group>
+            </trans-unit>
+          <trans-unit id="inputErrorMessage" datatype="html">
+                  <source>
+                      Invalid input
+                    </source>
+                    <target>Masukan Salah</target>
+                  <context-group purpose="location">
+                    <context context-type="sourcefile">src/app/login/login.component.html</context>
+                    <context context-type="linenumber">16</context>
+                  </context-group>
+                  <context-group purpose="location">
+                    <context context-type="sourcefile">src/app/login/login.component.html</context>
+                    <context context-type="linenumber">30</context>
+                  </context-group>
+                  <context-group purpose="location">
+                    <context context-type="sourcefile">src/app/register/register.component.html</context>
+                    <context context-type="linenumber">16</context>
+                  </context-group>
+                  <context-group purpose="location">
+                    <context context-type="sourcefile">src/app/register/register.component.html</context>
+                    <context context-type="linenumber">31</context>
+                  </context-group>
+                  <context-group purpose="location">
+                    <context context-type="sourcefile">src/app/register/register.component.html</context>
+                    <context context-type="linenumber">46</context>
+                  </context-group>
+                  <context-group purpose="location">
+                    <context context-type="sourcefile">src/app/register/register.component.html</context>
+                    <context context-type="linenumber">60</context>
+                  </context-group>
+                  <note priority="1" from="description"> show message when error input occur </note>
+                  <note priority="1" from="meaning">error message input</note>
+                </trans-unit>
+                <trans-unit id="inputSuccessMessage" datatype="html">
+                  <source>
+                      valid input
+                    </source>
+                    <target>Masukan Benar</target>
+                  <context-group purpose="location">
+                    <context context-type="sourcefile">src/app/login/login.component.html</context>
+                    <context context-type="linenumber">21</context>
+                  </context-group>
+                  <context-group purpose="location">
+                    <context context-type="sourcefile">src/app/login/login.component.html</context>
+                    <context context-type="linenumber">34</context>
+                  </context-group>
+                  <context-group purpose="location">
+                    <context context-type="sourcefile">src/app/register/register.component.html</context>
+                    <context context-type="linenumber">21</context>
+                  </context-group>
+                  <context-group purpose="location">
+                    <context context-type="sourcefile">src/app/register/register.component.html</context>
+                    <context context-type="linenumber">36</context>
+                  </context-group>
+                  <context-group purpose="location">
+                    <context context-type="sourcefile">src/app/register/register.component.html</context>
+                    <context context-type="linenumber">51</context>
+                  </context-group>
+                  <context-group purpose="location">
+                    <context context-type="sourcefile">src/app/register/register.component.html</context>
+                    <context context-type="linenumber">64</context>
+                  </context-group>
+                  <note priority="1" from="description"> show message when success input occur </note>
+                  <note priority="1" from="meaning">success messae</note>
+                </trans-unit>
+
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<main>
+  <div class="container" style="height:1500px;">
+    <div class="row pt-5">
+      <div class="col text-center">
+        <h2 i18n="@@dashboardTitle">Users</h2>
+        <table class="table">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th i18n="@@nameColumn">
+             Name</th>
+            <th i18n="@@actionColumn">
+              Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let user of users; let i = index">
+            <th scope="row">{{i + 1}}</th>
+            <td>
+              {{user.firstName}} {{user.lastName}}</td>
+            <td>
+              <button mdbBtn type="button" color="danger" size="sm" mdbWavesEffect (click)="delete(user.id)"
+                i18n="@@deleteButton"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>

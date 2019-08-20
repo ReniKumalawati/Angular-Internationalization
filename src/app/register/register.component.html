@@ -1,0 +1,80 @@
+<div class="row">
+  <div class="col-sm-6 offset-sm-3">
+    <mdb-card>
+  <mdb-card-body>
+    <mdb-card-title>
+      <h4 i18n="title | register @@cardRegisterTitle"> Register</h4>
+    </mdb-card-title>
+    <mdb-card-text>
+      <form [formGroup]="registerForm" (ngSubmit)="submit()">
+        <div class="md-form">
+          <mdb-icon fas icon="user-secret" class="prefix"></mdb-icon>
+          <input mdbInput minlength="4" class="form-control" type="text" formControlName="firstName">
+          <label i18n="input | input firstname on register @@registerInputfirstName">Type your first name</label>
+          <mdb-error *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
+                     i18n="error message input| show message when error input occur @@inputErrorMessage"
+          >
+            Invalid input
+          </mdb-error>
+          <mdb-success *ngIf="firstName.valid && (firstName.dirty || firstName.touched)"
+                       i18n="success messae| show message when success input occur @@inputSuccessMessage"
+          >
+            valid input
+          </mdb-success>
+        </div>
+        <div class="md-form">
+          <mdb-icon fas icon="user-secret" class="prefix"></mdb-icon>
+          <input mdbInput minlength="4" class="form-control" type="text" formControlName="lastName">
+          <label i18n="input | input lastname on login @@registerInputLastName">Type your last name</label>
+          <mdb-error *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"
+                     i18n="error message input| show message when error input occur @@inputErrorMessage"
+          >
+            Invalid input
+          </mdb-error>
+          <mdb-success *ngIf="lastName.valid && (lastName.dirty || lastName.touched)"
+                       i18n="success messae| show message when success input occur @@inputSuccessMessage"
+          >
+            valid input
+          </mdb-success>
+        </div>
+        <div class="md-form">
+          <mdb-icon fas icon="user-secret" class="prefix"></mdb-icon>
+          <input mdbInput minlength="4" class="form-control" type="text" formControlName="username">
+          <label i18n="input | input username on login @@loginInputUsername">Type your username</label>
+          <mdb-error *ngIf="username.invalid && (username.dirty || username.touched)"
+                     i18n="error message input| show message when error input occur @@inputErrorMessage"
+          >
+            Invalid input
+          </mdb-error>
+          <mdb-success *ngIf="username.valid && (username.dirty || username.touched)"
+                       i18n="success messae| show message when success input occur @@inputSuccessMessage"
+          >
+            valid input
+          </mdb-success>
+        </div>
+        <div class="md-form">
+          <mdb-icon fas icon="key" class="prefix"></mdb-icon>
+          <input mdbInput minlength="4" class="form-control" type="password" formControlName="password">
+          <label i18n="input | input password on login @@loginInputPassword">Type your password here</label>
+          <mdb-error *ngIf="password.invalid && (password.dirty || password.touched)"
+                     i18n="error message input| show message when error input occur @@inputErrorMessage">
+            Invalid input
+          </mdb-error>
+          <mdb-success *ngIf="password.valid && (password.dirty || password.touched)"
+                       i18n="success messae| show message when success input occur @@inputSuccessMessage">
+            valid input
+          </mdb-success>
+        </div>
+        <button type="submit" mdbBtn color="secondary" mdbWavesEffect block="true"
+                i18n="button| button submit @@btnRegisterSubmit" [disabled]="!registerForm.valid">
+          Register
+        </button>
+      </form>
+    </mdb-card-text>
+    <button type="button" mdbBtn color="primary" mdbWavesEffect block="true" routerLink="/login" i18n="@@btnLogin">
+      Log In
+    </button>
+  </mdb-card-body>
+</mdb-card>
+  </div>
+</div>

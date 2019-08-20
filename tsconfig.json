@@ -1,12 +1,15 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "src",
     "paths": {
-      "@/*": [
-        "app/*"
-      ]
+      "@app/*": ["app/*"],
+      "@model/*": ["app/_models/*"],
+      "@helper/*": ["app/_helper/*"],
+      "@service/*": ["app/_services/*"],
+      "@component/*": ["app/_components/*"],
+      "@partial/*": ["app/_partial/*"]
     },
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -15,7 +18,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015",
+    "target": "ES5",
     "typeRoots": [
       "node_modules/@types"
     ],

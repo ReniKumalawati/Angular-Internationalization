@@ -5,7 +5,11 @@
   "projects": {
     "Internationalizarion": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -24,11 +28,29 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss",
+              "node_modules/@fortawesome/fontawesome-free/scss/solid.scss",
+              "node_modules/@fortawesome/fontawesome-free/scss/regular.scss",
+              "node_modules/@fortawesome/fontawesome-free/scss/brands.scss",
+              "node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss",
+              "node_modules/angular-bootstrap-md/assets/scss/mdb.scss",
+              "node_modules/animate.css/animate.css",
+              "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/chart.js/dist/Chart.js",
+              "node_modules/hammerjs/hammer.min.js"
+            ]
           },
           "configurations": {
+            "id": {
+              "aot": true,
+              "outputPath": "dist/Internationalizarion-id/",
+              "i18nFile": "src/locale/messages.id.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "id",
+              "i18nMissingTranslation": "error"
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -68,6 +90,9 @@
           "configurations": {
             "production": {
               "browserTarget": "Internationalizarion:build:production"
+            },
+            "id": {
+              "browserTarget": "Internationalizarion:build:id"
             }
           }
         },
@@ -89,6 +114,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -120,6 +146,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "Internationalizarion"
 }
