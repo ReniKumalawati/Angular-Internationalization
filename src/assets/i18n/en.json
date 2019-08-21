@@ -1,0 +1,12 @@
+{
+	"dashboard": {
+		"button": {
+			"delete": "Delete"
+		},
+		"tableHeader": {
+			"Action": "Action",
+			"name": "Name"
+		},
+		"users": "Users"
+	}
+}

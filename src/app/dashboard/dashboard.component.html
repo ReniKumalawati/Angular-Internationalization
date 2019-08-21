@@ -3,15 +3,16 @@
   <div class="container" style="height:1500px;">
     <div class="row pt-5">
       <div class="col text-center">
-        <h2 i18n="@@dashboardTitle">Users</h2>
+        <h2>{{ 'dashboard.users' | translate }}</h2>
+        <h2>welcome {{currentUser}}</h2>
         <table class="table">
           <thead>
           <tr>
             <th>#</th>
-            <th i18n="@@nameColumn">
-             Name</th>
+            <th>
+              {{ 'dashboard.tableHeader.name' | translate }}</th>
             <th i18n="@@actionColumn">
-              Action</th>
+              {{ 'dashboard.tableHeader.Action' | translate }}</th>
           </tr>
           </thead>
           <tbody>
@@ -20,10 +21,8 @@
             <td>
               {{user.firstName}} {{user.lastName}}</td>
             <td>
-              <button mdbBtn type="button" color="danger" size="sm" mdbWavesEffect (click)="delete(user.id)"
-                i18n="@@deleteButton"
-              >
-                Delete
+              <button mdbBtn type="button" color="danger" size="sm" mdbWavesEffect (click)="delete(user.id)">
+                {{ 'dashboard.button.delete' | translate }}
               </button>
             </td>
           </tr>

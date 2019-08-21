@@ -1,0 +1,12 @@
+{
+	"dashboard": {
+		"button": {
+			"delete": "Hapus"
+		},
+		"tableHeader": {
+			"Action": "Pengaturan",
+			"name": "Nama"
+		},
+		"users": "Pengguna"
+	}
+}
