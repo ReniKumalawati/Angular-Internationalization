@@ -7,6 +7,7 @@ import {HttpLoaderFactory} from '@app/app.module';
 import {NavbarComponent} from '@partial/navbar/navbar.component';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import {RouterModule} from '@angular/router';
+import {User} from '@model/user';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -34,6 +35,16 @@ describe('DashboardComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(DashboardComponent);
     component = fixture.componentInstance;
+    const dummyUser: User = {
+      id : 1,
+      firstName: 'Reni',
+      lastName: 'Kumalawati',
+      password: '123456',
+      username: 'renifal',
+      token: 'Abcd123445667'
+    }
+    component.currentUser = dummyUser
+    component.users = [dummyUser]
     fixture.detectChanges();
   });
 
