@@ -15,11 +15,11 @@ import {Router} from '@angular/router';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   constructor(private fb: FormBuilder,
-              private authenticationervice: AuthenticationService,
+              private authenticationService: AuthenticationService,
               private alertService: AlertService,
               private router: Router
   ) {
-    if (this.authenticationervice.currentUserValue) {
+    if (this.authenticationService.currentUserValue) {
       this.router.navigate(['/dashboard']);
     }
   }
@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
   }
   submit() {
     if (this.loginForm.valid) {
-      this.authenticationervice.login(this.username.value, this.password.value)
+      this.authenticationService.login(this.username.value, this.password.value)
         .pipe(first())
         .subscribe(data => {
           this.alertService.setSuccessMessage('you are logged in');

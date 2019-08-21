@@ -7,6 +7,12 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
     alias: {
+      "@app": path.resolve(__dirname, 'src/app/'),
+      "@model": path.resolve(__dirname, 'src/app/_models/'),
+      "@helper": path.resolve(__dirname, 'src/app/_helper'),
+      "@service": path.resolve(__dirname, 'src/app/_services/'),
+      "@component": path.resolve(__dirname, 'src/app/_components/'),
+      "@partial": path.resolve(__dirname, 'src/app/_partial/')
       // '@': path.resolve(__dirname, 'src/app/'),
     }
   },
@@ -21,6 +27,10 @@ module.exports = {
         use: 'html-loader'
       },
       {
+        test: /\.css$/,
+        use: ['to-string-loader', 'css-loader']
+      },
+      {
         test: /\.less$/,
         use: ['style-loader', 'css-loader', 'less-loader']
       },
@@ -33,7 +43,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src/index.html')}),
     new webpack.DefinePlugin({
       // global app config object
       config: JSON.stringify({
