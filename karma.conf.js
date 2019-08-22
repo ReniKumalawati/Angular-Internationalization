@@ -12,6 +12,12 @@ module.exports = function (config) {
       require('karma-coverage-istanbul-reporter'),
       require('@angular-devkit/build-angular/plugins/karma')
     ],
+    files: [
+      './src/app/_helper/read-json.js',
+      {pattern: './src/test.ts', watched: false},
+      {pattern: './src/assets/i18n/en.json', included: false},
+      {pattern: './src/assets/i18n/id.json', included: false}
+    ],
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },

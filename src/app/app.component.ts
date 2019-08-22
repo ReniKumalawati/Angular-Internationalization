@@ -10,7 +10,7 @@ import {TranslateService} from '@ngx-translate/core';
 export class AppComponent implements OnInit {
   title = 'Internationalization';
   constructor(private translate: TranslateService) {
-    translate.setDefaultLang('en')
+    translate.setDefaultLang('id')
   }
   ngOnInit(): void {
     environment.API_URL = window.location.origin
