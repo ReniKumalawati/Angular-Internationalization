@@ -1,5 +1,4 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
@@ -8,17 +7,19 @@
       "@helper/*": ["app/_helper/*"],
       "@service/*": ["app/_services/*"],
       "@component/*": ["app/_components/*"],
-      "@partial/*": ["app/_partial/*"]
+      "@partial/*": ["app/_partial/*"],
+      "@assets/*": ["assets/*"]
     },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "ES5",
+    "target": "es2015",
     "typeRoots": [
       "node_modules/@types"
     ],

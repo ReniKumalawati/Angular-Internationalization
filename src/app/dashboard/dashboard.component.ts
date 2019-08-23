@@ -24,19 +24,19 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.alertService.clearMessage()
-    this.getAllUser()
+    this.alertService.clearMessage();
+    this.getAllUser();
   }
 
   private getAllUser() {
     this.userService.getAll()
       .pipe(first())
-      .subscribe(users => this.users = users)
+      .subscribe(users => this.users = users);
   }
   delete(id: number) {
     this.userService.delete(id)
       .pipe(first())
-      .subscribe(() => this.getAllUser())
+      .subscribe(() => this.getAllUser());
   }
 }
 

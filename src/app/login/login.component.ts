@@ -14,18 +14,14 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-  constructor(private fb: FormBuilder,
-              private authenticationService: AuthenticationService,
-              private alertService: AlertService,
-              private router: Router
-  ) {
+  constructor(private alertService: AlertService, private fb: FormBuilder, private authenticationService: AuthenticationService, private router: Router) {
     if (this.authenticationService.currentUserValue) {
       this.router.navigate(['/dashboard']);
     }
   }
   ngOnInit() {
     this.loginForm = this.fb.group({
-      username: ['', [Validators.required, Validators.minLength(10)]],
+      username: ['', [Validators.required, Validators.minLength(6)]],
       password: ['', Validators.required]
     });
   }
@@ -42,6 +38,8 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  get username() { return this.loginForm.get('username'); }
-  get password() { return this.loginForm.get('password'); }
+  get username() { return this.loginForm.get('username');
+  }
+  get password() { return this.loginForm.get('password');
+  }
 }

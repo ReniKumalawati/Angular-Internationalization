@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-
 module.exports = {
   entry: './src/main.ts',
   resolve: {
@@ -12,8 +11,8 @@ module.exports = {
       "@helper": path.resolve(__dirname, 'src/app/_helper'),
       "@service": path.resolve(__dirname, 'src/app/_services/'),
       "@component": path.resolve(__dirname, 'src/app/_components/'),
-      "@partial": path.resolve(__dirname, 'src/app/_partial/')
-      // '@': path.resolve(__dirname, 'src/app/'),
+      "@partial": path.resolve(__dirname, 'src/app/_partial/'),
+      '@assets': path.resolve(__dirname, 'src/assets/'),
     }
   },
   module: {
@@ -29,6 +28,13 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['to-string-loader', 'css-loader']
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: "to-string-loader"  //
+          }]
       },
       {
         test: /\.less$/,

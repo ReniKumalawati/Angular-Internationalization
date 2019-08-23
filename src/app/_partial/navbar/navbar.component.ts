@@ -10,12 +10,9 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
-  constructor(
-    private authenticationService: AuthenticationService,
-    private router: Router,
-    private translate: TranslateService
-  ) { }
+  constructor(private translate: TranslateService,
+              private authenticationService: AuthenticationService,
+              private router: Router) { }
 
   ngOnInit() {
   }

@@ -24,9 +24,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 // @ts-ignore
 import {DashboardModule} from '@app/dashboard/dashboard.module';
 import { NavbarComponent } from './_partial/navbar/navbar.component';
-import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-
+import {AuthenticationService} from '@service/authentication.service';
+import {AlertService} from '@app/_services';
 registerLocaleData(localeId);
 @NgModule({
   declarations: [
@@ -57,6 +58,8 @@ registerLocaleData(localeId);
     })
   ],
   providers: [
+    AlertService,
+    AuthenticationService,
     {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
     fakeBackendProvider
@@ -67,5 +70,6 @@ registerLocaleData(localeId);
 export class AppModule { }
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  const loc: string = ((location.port === '8080') ? '../src/assets/i18n/' : 'assets/i18n/')
+  return new TranslateHttpLoader(http, loc, '.json');
 }
