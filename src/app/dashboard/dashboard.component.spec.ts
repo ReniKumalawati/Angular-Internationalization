@@ -50,12 +50,22 @@ describe('DashboardComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('should be indonesian languange', () => {
-  //     fixture.detectChanges();
-  //     const compiled = fixture.debugElement.nativeElement;
-  //     expect(compiled.querySelector('h1').textContent).toContain('wellcome Reni');
-  //     expect(compiled.querySelector('h2').textContent).toContain('Pengguna');
-  //     expect(compiled.querySelectorAll('th')[1].textContent).toContain('Nama')
-  //     expect(compiled.querySelectorAll('th')[2].textContent).toContain('Pengaturan')
-  // });
+  it('should be indonesian languange', () => {
+      fixture.detectChanges();
+      const compiled = fixture.debugElement.nativeElement;
+      expect(compiled.querySelector('h1').textContent).toContain('wellcome Reni');
+      expect(compiled.querySelector('h2').textContent).toContain('Pengguna');
+      expect(compiled.querySelectorAll('th')[1].textContent).toContain('Nama')
+      expect(compiled.querySelectorAll('th')[2].textContent).toContain('Pengaturan')
+  });
+  it('should be english', () => {
+    translateService.use('en');
+    fixture = TestBed.createComponent(DashboardComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h2').textContent).toContain('Users');
+    expect(compiled.querySelector('h1').textContent).toContain('wellcome Reni');
+    expect(compiled.querySelectorAll('th')[1].textContent).toContain('Name')
+    expect(compiled.querySelectorAll('th')[2].textContent).toContain('Action')
+  });
 });
