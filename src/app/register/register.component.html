@@ -9,7 +9,7 @@
       <form [formGroup]="registerForm" (ngSubmit)="submit()">
         <div class="md-form">
           <mdb-icon fas icon="user-secret" class="prefix"></mdb-icon>
-          <input mdbInput minlength="4" class="form-control" type="text" formControlName="firstName">
+          <input mdbInput minlength="1" class="form-control" type="text" formControlName="firstName">
           <label i18n="input | input firstname on register @@registerInputfirstName">Type your first name</label>
           <mdb-error *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
                      i18n="error message input| show message when error input occur @@inputErrorMessage"

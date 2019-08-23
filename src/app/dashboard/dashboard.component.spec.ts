@@ -50,7 +50,7 @@ describe('DashboardComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should be indonesian languange', () => {
+  it('should be indonesian', () => {
       fixture.detectChanges();
       const compiled = fixture.debugElement.nativeElement;
       expect(compiled.querySelector('h1').textContent).toContain('wellcome Reni');
